@@ -1,0 +1,18 @@
+{
+    "steps": [
+      {
+        "name": "gcr.io/google.com/cloudsdktool/cloud-sdk",
+        "args": [
+          "gcloud",
+          "functions",
+          "deploy",
+          " etl_prakklak",
+          "--gen2",
+          "--region=asia-south1",
+          "--source=./prakklak",
+          "--trigger-http",
+          "--env-vars-file",
+          "cloudbuild_dev.json"
+        ]
+      }
+}

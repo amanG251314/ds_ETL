@@ -1,0 +1,7 @@
+projectName='hubemployee-189ad'
+tableName=`hubemployee-189ad.buffalo_pricing_dev.buffaloFinancedata_dev`
+pashuKundaliUrl='https://pashu-kundali-vslywuxv3a-df.a.run.app'
+akaashGangaUrl='https://akash-ganga-vslywuxv3a-df.a.run.app'
+bcsURL='https://complete-bcs-vslywuxv3a-el.a.run.app/predict'
+bucketName='ds_projects_dev'
+fileSaveLoc='ds_etl/buffaloPricing/data.csv'
