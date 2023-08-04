@@ -1,0 +1,5 @@
+Flask==2.3.2
+google_api_python_client==2.95.0
+protobuf==4.23.4
+python-dotenv==1.0.0
+pytz==2023.3

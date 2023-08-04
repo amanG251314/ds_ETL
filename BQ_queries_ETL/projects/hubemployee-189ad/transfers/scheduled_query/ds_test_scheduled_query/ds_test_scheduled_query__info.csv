@@ -1,0 +1,13 @@
+parameter,value
+job_name,projects/1019598212725/locations/asia-south1/transferConfigs/63ad3b6d-0000-28e3-abed-f4030438b388
+destination_dataset_id,ds_test
+display_name,ds_test_scheduled_query
+data_source_id,scheduled_query
+schedule,
+schedule_options__start_time,
+schedule_options_update_time,2023-01-05 02:46:17.887662+00:00
+schedule_options_next_run_time,None
+state,TransferState.SUCCEEDED
+user_id,3105787355470821267
+dataset_region,asia-south1
+email_preferences,False

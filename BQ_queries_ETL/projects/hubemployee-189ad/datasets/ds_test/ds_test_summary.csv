@@ -1,0 +1,3 @@
+dataset_id,table_id,table_type,clustering_fields,created,expires,friendly_name,full_table_id,partition_expiration,partitioning_type,path,project,reference,time_partitioning,view_use_legacy_sql
+ds_test,ds_test,table,,2023-01-02 12:23:30.938000+00:00,,,hubemployee-189ad:ds_test.ds_test,,,/projects/hubemployee-189ad/datasets/ds_test/tables/ds_test,hubemployee-189ad,hubemployee-189ad.ds_test.ds_test,,
+ds_test,ds_test_scheduled_query,table,,2023-01-05 02:46:55.564000+00:00,,,hubemployee-189ad:ds_test.ds_test_scheduled_query,,,/projects/hubemployee-189ad/datasets/ds_test/tables/ds_test_scheduled_query,hubemployee-189ad,hubemployee-189ad.ds_test.ds_test_scheduled_query,,

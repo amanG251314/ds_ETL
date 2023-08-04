@@ -1,0 +1,5 @@
+field_name,type,mode
+commit,STRING,NULLABLE
+author,RECORD,NULLABLE
+committer,RECORD,NULLABLE
+repo_name,STRING,REPEATED

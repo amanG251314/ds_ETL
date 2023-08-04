@@ -1,0 +1,4 @@
+SELECT 
+*
+FROM `merapashu360-buyer-app.analytics_308497106.ds_notification_analysis`
+limit 10000

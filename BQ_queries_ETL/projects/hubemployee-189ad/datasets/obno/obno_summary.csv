@@ -1,0 +1,7 @@
+dataset_id,table_id,table_type,clustering_fields,created,expires,friendly_name,full_table_id,partition_expiration,partitioning_type,path,project,reference,time_partitioning,view_use_legacy_sql
+obno,customers,table,,2022-11-18 06:28:05.097000+00:00,,,hubemployee-189ad:obno.customers,,,/projects/hubemployee-189ad/datasets/obno/tables/customers,hubemployee-189ad,hubemployee-189ad.obno.customers,,
+obno,invoices,table,,2022-11-18 06:28:37.055000+00:00,,,hubemployee-189ad:obno.invoices,,,/projects/hubemployee-189ad/datasets/obno/tables/invoices,hubemployee-189ad,hubemployee-189ad.obno.invoices,,
+obno,orders,table,,2022-11-18 06:09:55.173000+00:00,,,hubemployee-189ad:obno.orders,,,/projects/hubemployee-189ad/datasets/obno/tables/orders,hubemployee-189ad,hubemployee-189ad.obno.orders,,
+obno,payments,table,,2022-11-18 06:29:05.788000+00:00,,,hubemployee-189ad:obno.payments,,,/projects/hubemployee-189ad/datasets/obno/tables/payments,hubemployee-189ad,hubemployee-189ad.obno.payments,,
+obno,salespersons,table,,2022-11-18 06:30:20.189000+00:00,,,hubemployee-189ad:obno.salespersons,,,/projects/hubemployee-189ad/datasets/obno/tables/salespersons,hubemployee-189ad,hubemployee-189ad.obno.salespersons,,
+obno,shipments,table,,2022-11-18 06:31:03.820000+00:00,,,hubemployee-189ad:obno.shipments,,,/projects/hubemployee-189ad/datasets/obno/tables/shipments,hubemployee-189ad,hubemployee-189ad.obno.shipments,,

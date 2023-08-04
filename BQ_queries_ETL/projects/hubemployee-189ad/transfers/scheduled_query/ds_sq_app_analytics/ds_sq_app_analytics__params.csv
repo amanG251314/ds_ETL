@@ -1,0 +1,4 @@
+parameter,value
+query,select * from `merapashu360-buyer-app.analytics_308497106.events_20221208`
+destination_table_name_template,ds_events_snapshot
+write_disposition,WRITE_TRUNCATE

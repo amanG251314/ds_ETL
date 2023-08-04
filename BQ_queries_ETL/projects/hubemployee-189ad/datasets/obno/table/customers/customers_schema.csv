@@ -1,0 +1,14 @@
+field_name,type,mode
+_id,STRING,NULLABLE
+testCustomer,BOOLEAN,NULLABLE
+userId,STRING,NULLABLE
+firstName,STRING,NULLABLE
+lastName,STRING,NULLABLE
+createdBy,STRING,NULLABLE
+shippingAddresses,STRING,NULLABLE
+billingAddresses,STRING,NULLABLE
+defaultShippingAddress,STRING,NULLABLE
+defaultBillingAddress,STRING,NULLABLE
+phoneNumber,INTEGER,NULLABLE
+email,STRING,NULLABLE
+zohoCustomerId,INTEGER,NULLABLE

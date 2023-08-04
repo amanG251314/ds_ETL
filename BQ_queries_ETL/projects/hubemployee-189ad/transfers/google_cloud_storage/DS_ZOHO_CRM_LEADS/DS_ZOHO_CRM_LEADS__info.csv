@@ -1,0 +1,13 @@
+parameter,value
+job_name,projects/1019598212725/locations/asia-south1/transferConfigs/6420c5b1-0000-2462-b0fa-883d24fa7f18
+destination_dataset_id,ZOHO_CRM
+display_name,DS_ZOHO_CRM_LEADS
+data_source_id,google_cloud_storage
+schedule,every 24 hours
+schedule_options__start_time,2023-03-29 19:00:00+00:00
+schedule_options_update_time,2023-03-29 10:29:54.934984+00:00
+schedule_options_next_run_time,2023-08-03 19:00:00+00:00
+state,TransferState.SUCCEEDED
+user_id,-2438775243363554008
+dataset_region,asia-south1
+email_preferences,False
