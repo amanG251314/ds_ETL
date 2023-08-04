@@ -1,0 +1,311 @@
+with main_table as 
+
+(
+
+  SELECT 
+
+  IFNULL (user_id,user_pseudo_id) as user_id,
+
+  Date(FORMAT_DATE('%Y-%m-%d', PARSE_DATE('%Y%m%d',(event_date)))) as event_date,
+
+  COUNT(*) as event_count,
+
+  EXTRACT(HOUR from TIMESTAMP_MICROS(event_timestamp) AT TIME ZONE "UTC") as TOD,
+
+  EXTRACT(DAYOFWEEK from TIMESTAMP_MICROS(event_timestamp)) as DOW,
+
+  max(traffic_source.source) AS traffic_source_source,
+
+  max(ifnull(SPLIT(app_info.version, ' ')[SAFE_OFFSET(1)],SPLIT(app_info.version, ' ')[SAFE_OFFSET(0)])) as app_version,
+
+  max(geo.region) as state,
+
+  max(geo.city) as city,
+
+  concat(max(geo.city),",",max(geo.region),",",max(geo.country)) as location,
+
+  Count(distinct user_pseudo_id) as total_installs,
+
+  count(distinct event_name) as unique_events_count,
+
+
+
+  COUNT(DISTINCT
+
+               CASE 
+
+                 WHEN event_name <> 'app_update' AND 
+
+                      event_name <> 'notification_open' AND
+
+                      event_name <> 'app_update_popup_dismissed' AND
+
+                      event_name <> 'verify_otp_button_clicked' AND
+
+                      event_name <> 'send_otp_button_clicked' AND
+
+                      event_name <> 'notification_dismiss'AND
+
+                      event_name <> 'app_update_popup_shown' AND
+
+                      event_name <> 'notification_receive' AND
+
+                      event_name <> 'notification_foreground' AND
+
+                      event_name <> 'os_update' 
+
+                 THEN event_name 
+
+                 ELSE NULL 
+
+               END) AS unique_engaging_events_count,
+
+  COUNT(DISTINCT
+
+               CASE 
+
+                 WHEN event_name = 'app_update' OR 
+
+                      event_name = 'notification_open' OR
+
+                      event_name = 'app_update_popup_dismissed' OR
+
+                      event_name = 'verify_otp_button_clicked' OR
+
+                      event_name = 'send_otp_button_clicked' OR
+
+                      event_name = 'notification_dismiss' OR
+
+                      event_name = 'app_update_popup_shown' OR
+
+                      event_name = 'notification_receive' OR
+
+                      event_name = 'notification_foreground' OR
+
+                      event_name = 'os_update' 
+
+                 THEN event_name 
+
+                 ELSE NULL 
+
+               END) AS unique_non_engaging_events_count,
+
+  sum(case when event_name = 'purchase' then 1 else 0 end) as total_purchase_events,
+
+  max(case when event_name='purchase'  then 1 else 0 end) as is_purchaser,
+
+  sum( Distinct CASE
+
+          WHEN event_name='first_open' or 
+
+               event_name='sign_up'
+
+                THEN 1
+
+                ELSE 0
+
+                END) AS is_signed,
+
+  
+
+  sum( Distinct CASE
+
+          WHEN event_name='sell_more_cattle_button_clicked' or 
+
+               event_name='calving_filter_selected' or
+
+               event_name='child_button_clicked' or 
+
+               event_name='pregnancy_button_clicked' or
+
+               event_name='breed_filter_selected' OR event_name='milk_filter_selected'
+
+                THEN 1
+
+                ELSE 0
+
+                END) AS is_intereseted_in_cattle,
+
+
+
+ sum( Distinct CASE
+
+          WHEN event_name='Silage_feed_category_selected' or 
+
+               event_name='Khal_feed_category_selected' or
+
+               event_name='Concentrate_feed_category_selected'
+
+                THEN 1
+
+                ELSE 0
+
+                END) AS is_intereseted_in_cattle_feed,
+
+  
+
+ max(CASE 
+
+        WHEN event_name <> 'app_update' AND 
+
+             event_name <> 'notification_open' AND
+
+             event_name <> 'app_update_popup_dismissed' AND
+
+             event_name <> 'verify_otp_button_clicked' AND
+
+             event_name <> 'send_otp_button_clicked' AND
+
+             event_name <> 'notification_dismiss'AND
+
+             event_name <> 'app_update_popup_shown' AND
+
+             event_name <> 'notification_receive' AND
+
+             event_name <> 'notification_foreground' AND
+
+             event_name <> 'os_update' 
+
+        THEN 1 
+
+          ELSE 0 
+
+               END) AS is_active,
+
+  
+
+
+
+  SUM(CASE WHEN event_name = 'BROWSE_PRODUCTS_ROW_SWIPE_EMPTY_ORDER' THEN 1 ELSE 0 END) AS BROWSE_PRODUCTS_ROW_SWIPE_EMPTY_ORDER_count, 
+
+  SUM(CASE WHEN event_name = 'CUSTOMER_TESTIMONIAL_VIDEO_PLAYED' THEN 1 ELSE 0 END) AS CUSTOMER_TESTIMONIAL_VIDEO_PLAYED_count,
+
+  SUM(CASE WHEN event_name = 'Concentrate_feed_category_selected' THEN 1 ELSE 0 END) AS Concentrate_feed_category_selected_count,
+
+  SUM(CASE WHEN event_name = 'Khal_feed_category_selected' THEN 1 ELSE 0 END) AS Khal_feed_category_selected_count,
+
+  SUM(CASE WHEN event_name = 'PRODUCT_CARD_ON_EMPTY_CART_SCREEN_CLICK' THEN 1 ELSE 0 END) AS PRODUCT_CARD_ON_EMPTY_CART_SCREEN_CLICK_count,
+
+  SUM(CASE WHEN event_name = 'PRODUCT_CARD_ON_EMPTY_ORDER_SCREEN_CLICK' THEN 1 ELSE 0 END) AS PRODUCT_CARD_ON_EMPTY_ORDER_SCREEN_CLICK_count,
+
+  SUM(CASE WHEN event_name = 'Referral_Share' THEN 1 ELSE 0 END) AS Referral_Share_count,
+
+  SUM(CASE WHEN event_name = 'Register_Referral' THEN 1 ELSE 0 END) AS Register_Referral_count,
+
+  SUM(CASE WHEN event_name = 'send_otp_button_clicked' THEN 1 ELSE 0 END) AS send_otp_button_clicked_count,
+
+  SUM(CASE WHEN event_name = 'verify_otp_button_clicked' THEN 1 ELSE 0 END) AS verify_otp_button_clicked_count,
+
+  SUM(CASE WHEN event_name = 'child_button_clicked' THEN 1 ELSE 0 END) AS child_button_clicked_count,
+
+  SUM(CASE WHEN event_name = 'Share_Via_App' THEN 1 ELSE 0 END) AS Share_Via_App_count,
+
+  SUM(CASE WHEN event_name = 'Generate_Referral_DynamicLink' THEN 1 ELSE 0 END) AS Generate_Referral_DynamicLink_count,
+
+  SUM(CASE WHEN event_name = 'begin_book_appointment' THEN 1 ELSE 0 END) AS begin_book_appointment_count,
+
+  SUM(CASE WHEN event_name = 'view_video_button_clicked' THEN 1 ELSE 0 END) AS view_video_button_clicked_count,
+
+  SUM(CASE WHEN event_name = 'screen_view' THEN 1 ELSE 0 END) AS screen_view_count,
+
+  SUM(CASE WHEN event_name = 'firebase_campaign' THEN 1 ELSE 0 END) AS firebase_campaign_count,
+
+  SUM(CASE WHEN event_name = 'first_open' THEN 1 ELSE 0 END) AS first_open_count,
+
+  SUM(CASE WHEN event_name = 'dynamic_link_app_open' THEN 1 ELSE 0 END) AS dynamic_link_app_open_count,
+
+  SUM(CASE WHEN event_name = 'app_exception' THEN 1 ELSE 0 END) AS app_exception_count,
+
+  SUM(CASE WHEN event_name = 'teat_button_clicked' THEN 1 ELSE 0 END) AS teat_button_clicked_count,
+
+  SUM(CASE WHEN event_name = 'Share_Via_Share_Button' THEN 1 ELSE 0 END) AS Share_Via_Share_Button_count,
+
+  SUM(CASE WHEN event_name = 'select_content' THEN 1 ELSE 0 END) AS select_content_count,
+
+  SUM(CASE WHEN event_name = 'app_clear_data' THEN 1 ELSE 0 END) AS app_clear_data_count,
+
+  SUM(CASE WHEN event_name = 'sign_up' THEN 1 ELSE 0 END) AS sign_up_count,
+
+  SUM(CASE WHEN event_name = 'view_item' THEN 1 ELSE 0 END) AS view_item_count,
+
+  SUM(CASE WHEN event_name = 'price_filter_selected' THEN 1 ELSE 0 END) AS price_filter_selected_count,
+
+  SUM(CASE WHEN event_name = 'PRODUCT_CARD_ON_EMPTY_CART_SCREEN_CLICKED' THEN 1 ELSE 0 END) AS PRODUCT_CARD_ON_EMPTY_CART_SCREEN_CLICKED_count,
+
+  SUM(CASE WHEN event_name = 'user_engagement' THEN 1 ELSE 0 END) AS user_engagement_count,
+
+  SUM(CASE WHEN event_name = 'estimated_value_cattle_button_cliced' THEN 1 ELSE 0 END) AS estimated_value_cattle_button_cliced,
+
+  SUM(CASE WHEN event_name = 'upload_back_photo_button_clicked' THEN 1 ELSE 0 END) AS upload_back_photo_button_clicked_count,
+
+  sum(case when event_name = 'session_start' then 1 else 0 end) as total_session_counts,
+
+  sum(case when event_name = 'add_to_cart' then 1 else 0 end) as total_add_to_cart_events, 
+
+  sum(case when event_name = 'notification_open' then 1 else 0 end) as total_notification_open,
+
+  sum(case when event_name = 'notification_dismiss' then 1 else 0 end) as total_notification_dismiss,
+
+  sum(case when event_name = 'app_update_popup_dismissed' then 1 else 0 end) as app_update_popup_dismissed_count,
+
+  sum(case when event_name = 'app_update_popup_shown' then 1 else 0 end) as total_app_update_popup_shown,
+
+  sum(case when event_name = 'app_remove' then 1 else 0 end) as total_app_remove_count,
+
+  sum(case when event_name = 'sell_your_cattle_button_clicked' then 1 else 0 end) as total_sell_your_cattle_button_clicked,
+
+  sum(case when event_name = 'faq_button_clickd' then 1 else 0 end) as total_faq_button_clickd,
+
+  sum(case when event_name = 'app_update_button_clicked' then 1 else 0 end) as app_update_button_clicked_count,
+
+  sum(case when event_name = 'app_update' then 1 else 0 end) as total_app_update,
+
+  sum(case when event_name = 'language_change' then 1 else 0 end) as total_language_change,
+
+  sum(case when event_name = 'begin_checkout' then 1 else 0 end) as total_begin_checkout,
+
+  sum(case when event_name = 'book_appointment' then 1 else 0 end) as total_book_appointment,
+
+  sum(case when event_name = 'dynamic_link_app_update' then 1 else 0 end) as total_dynamic_link_app_update,
+
+  sum(case when event_name = 'share_animal_details_button_clicked' then 1 else 0 end) as total_share_animal_details_button_clicked,
+
+  sum(case when event_name = 'calving_filter_selected' then 1 else 0 end) as total_calving_filter_selected,
+
+  sum(case when event_name = 'breed_filter_selected' then 1 else 0 end) as total_breed_filter_selected,
+
+  sum(case when event_name = 'Share_Via_App' then 1 else 0 end) as Share_Via_App_selected,
+
+  sum(case when event_name = 'Silage_feed_category_selected' then 1 else 0 end) as Silage_feed_category_selected_count,
+
+  sum(case when event_name = 'profile_button_clicked' then 1 else 0 end) as profile_button_clicked_count,
+
+  sum(case when event_name = 'sell_more_cattle_button_clicked' then 1 else 0 end) as sell_more_cattle_button_clicked_count,
+
+  sum(case when event_name = 'pregnancy_button_clicked' then 1 else 0 end) as pregnancy_button_clicked_count,
+
+  sum(case when event_name = 'parturition_filter_selected' then 1 else 0 end) as parturition_filter_selected_count,
+
+  sum(case when event_name = 'os_update' then 1 else 0 end) as os_update_count,
+
+  sum(case when event_name = 'notification_receive' then 1 else 0 end) as notification_receive_count,
+
+  sum(case when event_name = 'notification_foreground' then 1 else 0 end) as notification_foreground_count,
+
+  sum(case when event_name = 'milk_filter_selected' then 1 else 0 end) as milk_filter_selected_count,
+
+  sum(case when event_name = 'measurements_button_clicked' then 1 else 0 end) as measurements_button_clicked_count,
+
+  sum(case when event_name = 'faq_question_expanded' then 1 else 0 end) as faq_question_expanded_count,
+
+  sum(case when event_name = 'dynamic_link_first_open' then 1 else 0 end) as dynamic_link_first_open_count
+
+
+
+ FROM `hubemployee-189ad.ds_app_analytics.ds_events_oct_nov_data_dump`
+
+ GROUP BY user_id ,TOD, DOW,event_date
+
+)
+
+select * from main_table

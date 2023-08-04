@@ -1,0 +1,17 @@
+field_name,type,mode
+full_name,STRING,NULLABLE
+phone_number,FLOAT,NULLABLE
+user_type,STRING,NULLABLE
+user_designation,STRING,NULLABLE
+date_joined,TIMESTAMP,NULLABLE
+leader_count,INTEGER,NULLABLE
+follower_count,INTEGER,NULLABLE
+latitude,FLOAT,NULLABLE
+longitude,FLOAT,NULLABLE
+village_name,STRING,NULLABLE
+block_name,STRING,NULLABLE
+district_name,STRING,NULLABLE
+state_name,STRING,NULLABLE
+is_channel,BOOLEAN,NULLABLE
+source,STRING,NULLABLE
+date_scraped,DATE,NULLABLE

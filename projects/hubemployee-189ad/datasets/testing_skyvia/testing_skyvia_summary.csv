@@ -1,0 +1,2 @@
+dataset_id,table_id,table_type,clustering_fields,created,expires,friendly_name,full_table_id,partition_expiration,partitioning_type,path,project,reference,time_partitioning,view_use_legacy_sql
+testing_skyvia,test,table,,2022-10-06 06:46:58.488000+00:00,,,hubemployee-189ad:testing_skyvia.test,,,/projects/hubemployee-189ad/datasets/testing_skyvia/tables/test,hubemployee-189ad,hubemployee-189ad.testing_skyvia.test,,

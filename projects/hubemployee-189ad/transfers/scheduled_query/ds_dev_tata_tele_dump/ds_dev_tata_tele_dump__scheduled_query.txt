@@ -1,0 +1,1 @@
+SELECT * FROM `merapashu360-buyer-app.ds_customer_analytics.ds_tatatele_raw_dump_v1`

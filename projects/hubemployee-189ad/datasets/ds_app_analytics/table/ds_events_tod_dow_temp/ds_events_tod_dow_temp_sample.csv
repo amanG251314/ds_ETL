@@ -1,0 +1,11 @@
+event_name,event_date,DOW,TOD,event_count
+notification_foreground,2022-10-01,7,0,7
+language_change,2022-10-01,7,0,4
+Khal_feed_category_selected,2022-10-01,7,0,3
+pregnancy_button_clicked,2022-10-01,7,0,2
+select_content,2022-10-01,7,0,182
+app_exception,2022-10-01,7,0,1
+send_otp_button_clicked,2022-10-01,7,0,2
+Silage_feed_category_selected,2022-10-01,7,0,4
+app_remove,2022-10-01,7,0,13
+measurements_button_clicked,2022-10-01,7,0,2

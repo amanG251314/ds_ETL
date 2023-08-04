@@ -1,0 +1,10 @@
+field_name,type,mode
+phone_num,STRING,NULLABLE
+Sales_customer_name,STRING,NULLABLE
+Sales_city,STRING,NULLABLE
+Sales_state,STRING,NULLABLE
+Sales_pincode,STRING,NULLABLE
+Amnt,FLOAT,NULLABLE
+Qty,FLOAT,NULLABLE
+SO_nums,STRING,NULLABLE
+Sales_wh_name,STRING,NULLABLE

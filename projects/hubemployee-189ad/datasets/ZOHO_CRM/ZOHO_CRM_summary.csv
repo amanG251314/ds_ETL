@@ -1,0 +1,5 @@
+dataset_id,table_id,table_type,clustering_fields,created,expires,friendly_name,full_table_id,partition_expiration,partitioning_type,path,project,reference,time_partitioning,view_use_legacy_sql
+ZOHO_CRM,Calls,table,,2023-03-29 10:22:12.338000+00:00,,,hubemployee-189ad:ZOHO_CRM.Calls,,,/projects/hubemployee-189ad/datasets/ZOHO_CRM/tables/Calls,hubemployee-189ad,hubemployee-189ad.ZOHO_CRM.Calls,,
+ZOHO_CRM,Contacts,table,,2023-03-29 09:44:04.699000+00:00,,,hubemployee-189ad:ZOHO_CRM.Contacts,,,/projects/hubemployee-189ad/datasets/ZOHO_CRM/tables/Contacts,hubemployee-189ad,hubemployee-189ad.ZOHO_CRM.Contacts,,
+ZOHO_CRM,Leads,table,,2023-03-29 09:41:25.023000+00:00,,,hubemployee-189ad:ZOHO_CRM.Leads,,,/projects/hubemployee-189ad/datasets/ZOHO_CRM/tables/Leads,hubemployee-189ad,hubemployee-189ad.ZOHO_CRM.Leads,,
+ZOHO_CRM,Tasks,table,,2023-03-29 10:23:57.473000+00:00,,,hubemployee-189ad:ZOHO_CRM.Tasks,,,/projects/hubemployee-189ad/datasets/ZOHO_CRM/tables/Tasks,hubemployee-189ad,hubemployee-189ad.ZOHO_CRM.Tasks,,

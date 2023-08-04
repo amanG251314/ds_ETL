@@ -1,0 +1,6 @@
+field_name,type,mode
+master_sku,STRING,NULLABLE
+item_name,STRING,NULLABLE
+fob_price,FLOAT,NULLABLE
+weight,FLOAT,NULLABLE
+item_category_label,STRING,NULLABLE
