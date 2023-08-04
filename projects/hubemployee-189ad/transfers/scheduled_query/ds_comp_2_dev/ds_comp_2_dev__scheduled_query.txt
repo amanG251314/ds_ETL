@@ -1,3 +1,1 @@
-TEST
-
 SELECT * FROM `merapashu360-buyer-app.ds_competitor_2.ds_competitor_2_movement_analysis`

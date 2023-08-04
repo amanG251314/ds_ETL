@@ -1,9 +1,9 @@
 parameter,value
 allow_quoted_newlines,True
-file_format,CSV
 data_path_template,gs://ds_projects_dev/ds_etl/KD_DUMP/customer.csv
-max_bad_records,0
+file_format,CSV
 allow_jagged_rows,True
+max_bad_records,0
 field_delimiter,","
 write_disposition,APPEND
 skip_leading_rows,0
