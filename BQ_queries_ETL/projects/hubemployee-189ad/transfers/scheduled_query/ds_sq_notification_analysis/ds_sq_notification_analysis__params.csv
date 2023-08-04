@@ -1,7 +1,0 @@
-parameter,value
-query,"SELECT 
-*
-FROM `merapashu360-buyer-app.analytics_308497106.ds_notification_analysis`
-limit 10000"
-destination_table_name_template,ds_notification_analysis
-write_disposition,WRITE_TRUNCATE

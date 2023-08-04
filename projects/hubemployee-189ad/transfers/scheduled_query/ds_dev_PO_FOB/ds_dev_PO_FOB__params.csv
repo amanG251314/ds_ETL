@@ -1,4 +1,0 @@
-parameter,value
-query,SELECT * FROM `merapashu360-buyer-app.Zoho_Inventory.ds_PO_FOB_prices_v2`
-destination_table_name_template,ds_PO_FOB_prices_v2
-write_disposition,WRITE_TRUNCATE

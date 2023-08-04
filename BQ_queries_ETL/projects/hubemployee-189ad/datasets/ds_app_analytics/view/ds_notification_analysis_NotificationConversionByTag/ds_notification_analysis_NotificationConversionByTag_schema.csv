@@ -1,5 +1,0 @@
-field_name,type,mode
-NotificationTag,STRING,NULLABLE
-NotificationReceived,INTEGER,NULLABLE
-NotificationOpen,INTEGER,NULLABLE
-PurchaseEvents,INTEGER,NULLABLE

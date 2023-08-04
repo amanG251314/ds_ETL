@@ -1,1 +1,0 @@
-SELECT * FROM `merapashu360-buyer-app.Zoho_Inventory.Sales_Merge_Data_Processed_v6` 

@@ -1,3 +1,0 @@
-field_name,type,mode
-Sales_Orders_Sales_Order_,STRING,NULLABLE
-amount,FLOAT,NULLABLE

@@ -1,5 +1,0 @@
-field_name,type,mode
-dateOfSale,DATE,NULLABLE
-buffaloTag,STRING,NULLABLE
-procurementPrice,FLOAT,NULLABLE
-salesPrice,FLOAT,NULLABLE

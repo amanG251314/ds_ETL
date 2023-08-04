@@ -1,6 +1,0 @@
-field_name,type,mode
-pincode,INTEGER,NULLABLE
-district,STRING,NULLABLE
-state,STRING,NULLABLE
-lat_location,FLOAT,NULLABLE
-long_location,FLOAT,NULLABLE

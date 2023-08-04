@@ -1,7 +1,0 @@
-field_name,type,mode
-id,STRING,NULLABLE
-name,STRING,NULLABLE
-phoneNo,INTEGER,NULLABLE
-timestamp,TIMESTAMP,NULLABLE
-referralCode,STRING,NULLABLE
-walletId,STRING,NULLABLE

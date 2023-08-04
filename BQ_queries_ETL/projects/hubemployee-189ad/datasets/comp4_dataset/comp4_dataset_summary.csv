@@ -1,2 +1,0 @@
-dataset_id,table_id,table_type,clustering_fields,created,expires,friendly_name,full_table_id,partition_expiration,partitioning_type,path,project,reference,time_partitioning,view_use_legacy_sql
-comp4_dataset,ds_temp_delete,table,,2023-02-12 18:15:02.074000+00:00,,,hubemployee-189ad:comp4_dataset.ds_temp_delete,,,/projects/hubemployee-189ad/datasets/comp4_dataset/tables/ds_temp_delete,hubemployee-189ad,hubemployee-189ad.comp4_dataset.ds_temp_delete,,

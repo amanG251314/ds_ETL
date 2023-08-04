@@ -1,4 +1,0 @@
-parameter,value
-query,SELECT * FROM `merapashu360-buyer-app.ds_competitor_4.ds_comp4_leads_fulldump`
-destination_table_name_template,ds_comp_4
-write_disposition,WRITE_TRUNCATE

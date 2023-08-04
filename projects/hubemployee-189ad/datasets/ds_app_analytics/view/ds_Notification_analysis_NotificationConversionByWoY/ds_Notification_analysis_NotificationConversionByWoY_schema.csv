@@ -1,6 +1,0 @@
-field_name,type,mode
-WoY,INTEGER,NULLABLE
-YoY,INTEGER,NULLABLE
-NotificationReceived,INTEGER,NULLABLE
-NotificationOpen,INTEGER,NULLABLE
-PurchaseEvents,INTEGER,NULLABLE

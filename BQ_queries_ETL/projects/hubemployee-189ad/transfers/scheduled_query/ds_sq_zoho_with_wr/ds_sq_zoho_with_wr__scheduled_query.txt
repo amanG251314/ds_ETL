@@ -1,1 +1,0 @@
-select * from `merapashu360-buyer-app.Zoho_Inventory.ds_view_zoho_processed_with_wallet`

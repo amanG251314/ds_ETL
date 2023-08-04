@@ -1,5 +1,0 @@
-field_name,type,mode
-id,STRING,NULLABLE
-timestamp,TIMESTAMP,NULLABLE
-referrer,JSON,NULLABLE
-referee,JSON,NULLABLE
