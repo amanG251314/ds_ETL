@@ -1,0 +1,4 @@
+parameter,value
+query,select * from `merapashu360-buyer-app.Zoho_Inventory.ds_view_zoho_processed_with_wallet`
+destination_table_name_template,ds_zoho_with_wr
+write_disposition,WRITE_TRUNCATE

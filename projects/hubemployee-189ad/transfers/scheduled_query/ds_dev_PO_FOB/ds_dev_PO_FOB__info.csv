@@ -1,0 +1,13 @@
+parameter,value
+job_name,projects/1019598212725/locations/asia-south1/transferConfigs/640657c4-0000-204f-a6d7-f40304389be4
+destination_dataset_id,Zoho_Inventory
+display_name,ds_dev_PO_FOB
+data_source_id,scheduled_query
+schedule,
+schedule_options__start_time,
+schedule_options_update_time,2023-03-09 12:38:21.449109+00:00
+schedule_options_next_run_time,None
+state,4
+user_id,-2438775243363554008
+dataset_region,asia-south1
+email_preferences,False

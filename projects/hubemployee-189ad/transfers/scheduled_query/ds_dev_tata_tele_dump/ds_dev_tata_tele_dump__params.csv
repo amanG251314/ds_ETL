@@ -1,0 +1,4 @@
+parameter,value
+query,SELECT * FROM `merapashu360-buyer-app.ds_customer_analytics.ds_tatatele_raw_dump_v1`
+destination_table_name_template,ds_tatatele_raw_dump_v1
+write_disposition,WRITE_TRUNCATE

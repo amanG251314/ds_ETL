@@ -1,0 +1,1 @@
+SELECT * FROM `merapashu360-buyer-app.ds_competitor_4.ds_comp4_leads_fulldump`

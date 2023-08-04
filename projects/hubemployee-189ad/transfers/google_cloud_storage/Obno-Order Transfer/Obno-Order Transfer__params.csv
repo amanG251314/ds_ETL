@@ -1,0 +1,9 @@
+parameter,value
+file_format,CSV
+data_path_template,gs://etl-dump/obno/orders_dump.csv
+max_bad_records,0
+delete_source_files,True
+field_delimiter,","
+write_disposition,APPEND
+skip_leading_rows,0
+destination_table_name_template,orders

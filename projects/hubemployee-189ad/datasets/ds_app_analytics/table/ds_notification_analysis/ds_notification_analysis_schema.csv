@@ -1,0 +1,13 @@
+field_name,type,mode
+NR_user_id,STRING,NULLABLE
+NR_event_date,STRING,NULLABLE
+NR_NotificationTime,INTEGER,NULLABLE
+NR_string_value,STRING,NULLABLE
+NO_user_id,STRING,NULLABLE
+NO_event_date,STRING,NULLABLE
+NO_NotificationTime,INTEGER,NULLABLE
+NO_string_value,STRING,NULLABLE
+PE_user_id,STRING,NULLABLE
+PE_event_date,STRING,NULLABLE
+PE_NotificationTime,INTEGER,NULLABLE
+PE_purchases,INTEGER,NULLABLE
