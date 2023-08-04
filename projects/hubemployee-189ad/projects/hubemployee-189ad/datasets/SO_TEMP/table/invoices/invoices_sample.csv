@@ -1,0 +1,56 @@
+invoice_id,Customer_Name,Customer_ID,status,invoice_number,SalesOrder_Number,date,due_date,currency_id,Currency_Code,currency_symbol,is_pre_gst,invoice_url,Branch_ID,Branch_Name,Billing_Address,Billing_City,Billing_State,Billing_Country,Billing_Code,Billing_Fax,Billing_Phone,Shipping_Address,Shipping_City,Shipping_State,Shipping_Country,Shipping_Code,Shipping_Fax,Shipping_Phone,Sales_Person,phone,mobile_phone
+707689000022779749,Raj kumar Ji,707689000022761680,sent,INV-FD-023019,SO-25190,2022-10-03,2022-10-03,707689000000000064,INR,Rs,,,707689000010246190,Noida,House no. 1535 Sanjay nagar sec 23,Sanjay nagar,UTTAR PRADESH,India,201002.0,,'+918882619039,"Raj kumar s/o Shri ram sharan
+House no. 1535 Sanjay nagar sec 23
+rahis school road GHAZIABAD
+Sanjay nagar
+UTTAR PRADESH 201002
+India
+Phone: +918882619039",,,,,,,PARMILA RANI,'+918882619039,'+918882619039
+707689000022824040,Merapashu360 Private Limited (Rewari),707689000013384135,draft,INV-FD-INC-77,SO-INC-77,2022-10-03,2022-10-03,707689000000000064,INR,Rs,,,707689000010246190,Noida,"15 Kanal, 4 Marala Waka
+Village Bhawadi",Rewari,Haryana,India,123401.0,,,,,,,,,,Pashufy Tech,,
+707689000022658181,Merapashu360 Private Limited (Rajpura),707689000014735325,draft,INV-FD-INC-75,SO-INC-75,2022-10-01,2022-10-01,707689000000000064,INR,Rs,,,707689000010851812,Karnal,"Near Asian Cement Factory, Khasra No. 143, 144, Jammu Delhi Road, Rajgarh",Rajpura,Punjab,India,140401.0,,,,,,,,,,Pashufy Tech,,
+707689000022658226,MeraPashu360 Private Limited (Rohtak),707689000016584978,overdue,INV-FD-INC-76,SO-INC-76,2022-10-01,2022-10-01,707689000000000064,INR,Rs,,,707689000010246840,Meerut,"Village Bhalout, near Vidhya Shree International School",Rohtak,Haryana,India,124001.0,,,,,,,,,,Pashufy Tech,,
+707689000022784410,Nitesh ji .,707689000022771492,void,INV-FD-023033,SO-25189,2022-10-03,2022-10-03,707689000000000064,INR,Rs,,,707689000010248318,Ganganagar,"Nitesh ji
+fakirwali GANGANAGAR
+fakirwali padampur
+GANGANAGAR
+RAJASTHAN 335001
+India
+Phone: 7877302683",,,,,,,"Nitesh ji
+fakirwali GANGANAGAR
+fakirwali padampur
+GANGANAGAR
+RAJASTHAN 335001
+India
+Phone: 7877302683",,,,,,,MP360 Buyer App,7877302683,
+707689000022830543,Nitesh ji .,707689000022771492,sent,INV-FD-023101,SO-25243,2022-10-03,2022-10-03,707689000000000064,INR,Rs,,,707689000010248318,Ganganagar,"Nitesh ji
+fakirwali GANGANAGAR
+fakirwali padampur
+GANGANAGAR
+RAJASTHAN 335001
+India
+Phone: 7877302683",,,,,,,"Nitesh ji
+fakirwali GANGANAGAR
+fakirwali padampur
+GANGANAGAR
+RAJASTHAN 335001
+India
+Phone: 7877302683",,,,,,,Pashufy Tech,7877302683,
+707689000022854369,Mr. Banta ram ji. .,707689000022853187,draft,INV-FD-023161,SO-25255,2022-10-03,2022-10-03,707689000000000064,INR,Rs,,,707689000010248318,Ganganagar,"Banta ram ji
+4LNP GANGANAGAR
+4LNP peer kaan Mandir
+GANGANAGAR
+RAJASTHAN 335001
+India
+Phone: 8302317307",,,,,,,"Banta ram ji
+4LNP GANGANAGAR
+4LNP peer kaan Mandir
+GANGANAGAR
+RAJASTHAN 335001
+India
+Phone: 8302317307",,,,,,,MP360 Buyer App,8302317307,
+707689000022816460,FULE RAM DALAL S/ DABLE RAM,707689000008858433,paid,INV-FD-023083,SO-25260,2022-10-02,2022-10-02,707689000000000064,INR,Rs,,,707689000011035803,Matan Cattle Hub,VILLAGE MATAN JHAJJAR HARYANA,JHAJJAR,,India,124507.0,,9813257784,VILLAGE MATAN JHAJJAR HARYANA,JHAJJAR,,India,124507.0,,9813257784,manjeet,,
+707689000022712296,Banta singh,707689000022712217,draft,INV-FD-022979,SO-25121,2022-10-01,2022-10-01,707689000000000064,INR,Rs,,,707689000011031591,Dairy Farm Ganganagar,village punjaba district abohar state punjab,,,India,,,,village punjaba district abohar state punjab,,,India,,,,nitin,,8146689678
+707689000022863013,Ajay S/ Ramkuwar,707689000017377396,draft,INV-FD-023166,SO-25119,2022-10-03,2022-10-03,707689000000000064,INR,Rs,,,707689000011410221,Gurgaon,"Najfagarh,
+Md road near gopal nagar gali no 34",SOUTH WEST,Delhi,India,110043.0,,9560080814,"Najfagarh,
+Md road near gopal nagar gali no 34",SOUTH WEST,Delhi,India,110043.0,,9560080814,,'+919560080814,
