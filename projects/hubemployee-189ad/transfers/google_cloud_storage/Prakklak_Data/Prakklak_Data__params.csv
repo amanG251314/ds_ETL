@@ -1,6 +1,6 @@
 parameter,value
-data_path_template,gs://ds_projects_dev/ds_etl/buffaloPricing/data.csv
 file_format,CSV
+data_path_template,gs://ds_projects_dev/ds_etl/buffaloPricing/data.csv
 max_bad_records,0
 field_delimiter,","
 write_disposition,APPEND
