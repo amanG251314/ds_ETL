@@ -1,8 +1,0 @@
-field_name,type,mode
-Handle,STRING,NULLABLE
-Views,INTEGER,NULLABLE
-Subscriber,INTEGER,NULLABLE
-Total_Videos,INTEGER,NULLABLE
-Joining_Date,STRING,NULLABLE
-Today_Date,DATE,NULLABLE
-Scrape_Time,TIME,NULLABLE

@@ -1,4 +1,0 @@
-dataset_id,table_id,table_type,clustering_fields,created,expires,friendly_name,full_table_id,partition_expiration,partitioning_type,path,project,reference,time_partitioning,view_use_legacy_sql
-KUBERDHAN,Customers,table,,2023-01-18 19:03:28.671000+00:00,,,hubemployee-189ad:KUBERDHAN.Customers,,,/projects/hubemployee-189ad/datasets/KUBERDHAN/tables/Customers,hubemployee-189ad,hubemployee-189ad.KUBERDHAN.Customers,,
-KUBERDHAN,Referrals,table,,2023-01-18 19:09:57.967000+00:00,,,hubemployee-189ad:KUBERDHAN.Referrals,,,/projects/hubemployee-189ad/datasets/KUBERDHAN/tables/Referrals,hubemployee-189ad,hubemployee-189ad.KUBERDHAN.Referrals,,
-KUBERDHAN,Transactions,table,,2023-01-18 19:24:51.687000+00:00,,,hubemployee-189ad:KUBERDHAN.Transactions,,,/projects/hubemployee-189ad/datasets/KUBERDHAN/tables/Transactions,hubemployee-189ad,hubemployee-189ad.KUBERDHAN.Transactions,,

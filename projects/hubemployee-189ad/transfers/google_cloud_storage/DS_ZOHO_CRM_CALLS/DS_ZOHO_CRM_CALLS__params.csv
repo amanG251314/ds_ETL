@@ -1,9 +1,0 @@
-parameter,value
-allow_quoted_newlines,True
-file_format,CSV
-data_path_template,gs://ds_projects_dev/ds_etl/ZOHO_CRM/Calls.csv
-max_bad_records,0
-field_delimiter,","
-write_disposition,APPEND
-skip_leading_rows,0
-destination_table_name_template,Calls

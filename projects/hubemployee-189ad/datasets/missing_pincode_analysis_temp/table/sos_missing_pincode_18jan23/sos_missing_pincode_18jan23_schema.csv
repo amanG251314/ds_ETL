@@ -1,6 +1,0 @@
-field_name,type,mode
-Sales_Orders_Sales_Order_,STRING,NULLABLE
-Invoice_Status,STRING,NULLABLE
-Order_Date,DATE,NULLABLE
-Mobile_Num,INTEGER,NULLABLE
-Phone_Num,INTEGER,NULLABLE

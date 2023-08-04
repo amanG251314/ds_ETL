@@ -1,6 +1,0 @@
-field_name,type,mode
-event_name,STRING,NULLABLE
-event_date,STRING,NULLABLE
-event_count,INTEGER,NULLABLE
-TOD,INTEGER,NULLABLE
-DOW,INTEGER,NULLABLE

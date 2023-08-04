@@ -1,4 +1,0 @@
-parameter,value
-query,SELECT * FROM `merapashu360-buyer-app.Zoho_Inventory.ds_view_items_sku_fob_master_mapping` 
-destination_table_name_template,ds_zoho_item_master
-write_disposition,WRITE_TRUNCATE
