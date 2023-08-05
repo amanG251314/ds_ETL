@@ -7,7 +7,7 @@ schedule,
 schedule_options__start_time,
 schedule_options_update_time,2023-03-09 12:38:21.449109+00:00
 schedule_options_next_run_time,None
-state,4
+state,TransferState.SUCCEEDED
 user_id,-2438775243363554008
 dataset_region,asia-south1
 email_preferences,False

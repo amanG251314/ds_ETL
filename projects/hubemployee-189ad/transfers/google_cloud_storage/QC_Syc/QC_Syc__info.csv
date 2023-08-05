@@ -7,7 +7,7 @@ schedule,every 24 hours
 schedule_options__start_time,2023-01-12 20:30:00+00:00
 schedule_options_update_time,2023-01-18 18:53:27.393083+00:00
 schedule_options_next_run_time,2023-08-05 20:30:00+00:00
-state,4
+state,TransferState.SUCCEEDED
 user_id,-2438775243363554008
 dataset_region,asia-south1
 email_preferences,True
