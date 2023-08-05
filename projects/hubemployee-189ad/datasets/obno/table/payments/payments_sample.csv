@@ -1,0 +1,4 @@
+string_field_0,string_field_1,string_field_2,string_field_3,string_field_4,string_field_5,string_field_6
+_id,order,amount,paymentMethod,channel,reference,status
+6375cb56b6d2e2e1ad3dc69a,6375cb55b6d2e2e1ad3dc68b,"{""currencyCode"":""INR"",""amount"":1080,""_id"":""6375cb56b6d2e2e1ad3dc69b""}",WALLET_REDEEM,KUBERDHAN,6375cb55b6d2e2e1ad3dc68b,Pending
+6375e153b6d2e2e1ad3dccb6,6375e151b6d2e2e1ad3dcca7,"{""currencyCode"":""INR"",""amount"":1080,""_id"":""6375e153b6d2e2e1ad3dccb7""}",WALLET_REDEEM,KUBERDHAN,6375e151b6d2e2e1ad3dcca7,Pending

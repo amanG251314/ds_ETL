@@ -1,0 +1,1 @@
+select * from `merapashu360-buyer-app.analytics_308497106.events_20221208`

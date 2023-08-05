@@ -1,0 +1,7 @@
+field_name,type,mode
+string_field_0,STRING,NULLABLE
+string_field_1,STRING,NULLABLE
+string_field_2,STRING,NULLABLE
+string_field_3,STRING,NULLABLE
+string_field_4,STRING,NULLABLE
+string_field_5,STRING,NULLABLE

@@ -1,0 +1,123 @@
+with 
+
+total_data as 
+
+(
+
+    select * from `merapashu360-buyer-app.analytics_308497106.events_*` 
+
+      where _TABLE_SUFFIX = FORMAT_DATE('%Y%m%d', DATE_SUB(CURRENT_DATE('Asia/Kolkata'), INTERVAL 1 DAY))
+
+    union all 
+
+    select * from `merapashu360-buyer-app.analytics_308497106.events_intraday_*` 
+
+      where _TABLE_SUFFIX = FORMAT_DATE('%Y%m%d', DATE_SUB(CURRENT_DATE('Asia/Kolkata'), INTERVAL 1 DAY))
+
+),
+
+main_table as (
+
+SELECT 
+
+IFNULL(user_id,user_pseudo_id) as user_id,max(app_info.version)as app_version,max(traffic_source.source) AS traffic_source_source,
+
+sum(case when event_name='session_start' then 1 else 0 end) as total_session_start_events,
+
+
+
+sum(case when params.value.string_value = 'Feed Home Screen' then 1 else 0 end) as total_feed_home_screen,
+
+
+
+sum(case when params.value.string_value = 'Feed Listing Screen' or params.value.string_value = 'Feed Listing from Wallet Screen' then 1 else 0 end) as total_feed_listing_screen,
+
+
+
+sum(case when event_name='view_item' and params.value.string_value = 'Feed Detail Screen' or params.value.string_value ='From FeedDetailActivity' or params.value.string_value = 'FeedDetailScreen' then 1 else 0 end) as total_feed_detail_screen,
+
+
+
+sum(case when event_name='add_to_cart'and params.value.string_value = 'Feed Detail Screen' or params.value.string_value ='From FeedDetailActivity' or params.value.string_value = 'FeedDetailScreen' then 1 else 0 end) as total_add_to_cart_events,
+
+
+
+sum( Distinct CASE
+
+          WHEN (event_name='Silage_feed_category_selected' or 
+
+               event_name='Khal_feed_category_selected' or
+
+               event_name='Concentrate_feed_category_selected')and 
+
+               params.value.string_value = 'From Order Details Screen'or
+
+               params.value.string_value = 'From OrderActivity'or
+
+               params.value.string_value = 'From OrderDetailsActivity'
+
+
+
+               
+
+                THEN 1
+
+                ELSE 0
+
+                END) AS total_order_details,
+
+
+
+
+
+sum(case when event_name='purchase' and params.value.string_value = 'Feed Detail Screen' or params.value.string_value ='From FeedDetailActivity' or params.value.string_value = 'FeedDetailScreen' then 1 else 0 end) as total_purchase_events,
+
+
+
+FROM total_data,UNNEST(event_params) as params
+
+group by user_id,event_date
+
+),
+
+zoho_details as(
+
+SELECT user_id as zoho_id,cast(max(phone_number) as integer) as phone_number FROM `merapashu360-buyer-app.ds_customer_analytics.ds_app_user_mapping_view`
+
+group by user_id
+
+),
+
+wallet_details as (
+
+  select count(distinct Sales_Orders_Sales_Order_) as orders_count,
+
+  ifnull(Customers_Phone,Customers_Mobile_Phone) as w_phone_number,
+
+  sum(Invoice_Items_Total__BCY_ + ifnull(WalletRedemption,0)) as actual_cash_collected,
+
+  (case when max(Sales_Orders_Status) = 'draft' then 'draft'
+
+  when max(Sales_Orders_Status) = 'open' then 'open'
+
+  when max(Sales_Orders_Status) = 'invoiced' then 'invoiced'
+
+  when max(Sales_Orders_Status) = 'partially_invoiced' then 'partially_invoiced'
+
+  else null end) as Status
+
+  from `merapashu360-buyer-app.Zoho_Inventory.ds_view_zoho_processed_with_wallet` 
+
+  group by w_phone_number,Sales_Orders_Order_Date
+
+)
+
+
+
+
+
+select * from main_table left join zoho_details on main_table.user_id=zoho_details.zoho_id
+
+left join wallet_details on wallet_details.w_phone_number=zoho_details.phone_number
+
+

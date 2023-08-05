@@ -1,0 +1,15 @@
+SELECT
+
+EXTRACT(WEEK FROM PARSE_DATE("%Y%m%d", NR_event_date)) AS WoY,
+
+EXTRACT(YEAR FROM PARSE_DATE("%Y%m%d", NR_event_date)) AS YoY, -- try extracting year aswell and use it in tables in data studio
+
+count(NR_user_id) as NotificationReceived,
+
+count(NO_user_id) as NotificationOpen,
+
+count(PE_user_id) as PurchaseEvents
+
+FROM `hubemployee-189ad.ds_app_analytics.ds_notification_analysis`
+
+GROUP BY WoY,YoY
